@@ -7,7 +7,7 @@ public class ExercicioUm {
 	//Método para aguardar
 	public void aguarde() {
 		try {
-		    Thread.sleep(3000); // Pausa por 2000 milissegundos (2 segundos)
+		    Thread.sleep(3000); // Pausa por 3000 milissegundos (2 segundos)
 		} catch (InterruptedException e) {
 		    e.printStackTrace();
 		}
