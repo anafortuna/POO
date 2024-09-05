@@ -9,7 +9,7 @@ public class DoubleBalancoTri {
 		Double gastosFevereiro = new Double(23000);
 		Double gastosMarco = new Double(17000);
 		
-		Double gastosTrimestre = gastosJaneiro + gastosFevereiro + gastosMarco; 
+		double gastosTrimestre = gastosJaneiro + gastosFevereiro + gastosMarco; 
 		
 		System.out.print("O gasto total do primeiro trimestre é " + gastosTrimestre + ".");
 
