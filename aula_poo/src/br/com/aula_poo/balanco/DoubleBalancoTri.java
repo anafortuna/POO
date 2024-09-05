@@ -5,9 +5,9 @@ public class DoubleBalancoTri {
 	public static void main(String[] args) {
 		
 		//Criar instâncias Double
-		Double gastosJaneiro = new Double(15000);
-		Double gastosFevereiro = new Double(23000);
-		Double gastosMarco = new Double(17000);
+		Double gastosJaneiro = 15000.;
+		Double gastosFevereiro = 23000.;
+		Double gastosMarco = 17000.;
 		
 		double gastosTrimestre = gastosJaneiro + gastosFevereiro + gastosMarco; 
 		
