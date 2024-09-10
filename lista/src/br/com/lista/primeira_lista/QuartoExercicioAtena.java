@@ -1,4 +1,4 @@
-package br.com.poo.primeira_lista;
+package br.com.lista.primeira_lista;
 
 import java.util.Scanner;
 

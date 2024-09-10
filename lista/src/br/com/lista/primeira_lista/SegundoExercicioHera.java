@@ -1,4 +1,4 @@
-package br.com.poo.primeira_lista;
+package br.com.lista.primeira_lista;
 
 /*
  * Lista de Exercícios 1 - Exercício 2 - Hera
