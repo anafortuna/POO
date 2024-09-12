@@ -1,6 +1,10 @@
 package br.com.lista.segunda_lista;
 
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import br.com.lista.utils.Util;
 
 public class ExercicioUm {
 	
@@ -9,9 +13,13 @@ public class ExercicioUm {
 		try {
 		    Thread.sleep(3000); // Pausa por 3000 milissegundos (2 segundos)
 		} catch (InterruptedException e) {
-		    e.printStackTrace();
+			logger.log(Level.WARNING, "Interrupted!", e);
+			 Thread.currentThread().interrupt();
 		}
 	}
+	
+	//Instância do Logger
+	private static Logger logger = Util.setupLogger();
 	
 	public static void main(String[] args) {
 		
@@ -21,25 +29,25 @@ public class ExercicioUm {
 		ExercicioUm aguardar = new ExercicioUm();
 		Scanner sc = new Scanner(System.in); 
 		
-		System.out.println("Olá, viajante!");
-		System.out.print("Quer saber qual o significado da vida, do universo e tudo mais? ");
+		logger.info("Olá, viajante!");
+		logger.info("Quer saber qual o significado da vida, do universo e tudo mais? ");
 		respostaUsuario = sc.next();
 		
 		
-		while(verificaResposta == false) {
+		while(!verificaResposta) {
 			if(respostaUsuario.equals("Sim")) {
-				System.out.println("Então vou te contar!");
+				logger.info("Então vou te contar!");
 				aguardar.aguarde();
-				System.out.println("É uma resposta fundamental!");
+				logger.info("É uma resposta fundamental!");
 				aguardar.aguarde();
-				System.out.println("O significado da vida, do universo e tudo mais é 42.");
+				logger.info("O significado da vida, do universo e tudo mais é 42.");
 				verificaResposta = true;
 			} else if(respostaUsuario.equals("Não")) {
-				System.out.println("Que pena! Nem todos estão prontos para essa resposta.");
-				System.out.println("Quem sabe uma próxima vez!");
+				logger.info("Que pena! Nem todos estão prontos para essa resposta.");
+				logger.info("Quem sabe uma próxima vez!");
 				verificaResposta = true;
 			} else {
-				System.out.print("Entrada inválida! Digite 'Sim' ou 'Não': ");
+				logger.info("Entrada inválida! Digite 'Sim' ou 'Não': ");
 				respostaUsuario = sc.next();
 			}
 

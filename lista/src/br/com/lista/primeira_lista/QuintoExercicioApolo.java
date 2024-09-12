@@ -1,6 +1,9 @@
 package br.com.lista.primeira_lista;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
+
+import br.com.lista.utils.Util;
 
 /*
  * Lista de Exercícios 1 - Exercício 5 - Apolo
@@ -10,6 +13,9 @@ import java.util.Scanner;
  */
 
 public class QuintoExercicioApolo {
+	
+	//Instância do Logger
+	private static Logger logger = Util.setupLogger();
 
 	public static void main(String[] args) {
 			
@@ -21,24 +27,26 @@ public class QuintoExercicioApolo {
 			//Instância Scanner
 			Scanner sc = new Scanner(System.in);
 
-			System.out.println("Dentre as expressões:");
-			System.out.println("(1) 2 + 3 - 5 * 8 - 4 + 354 - 521 + 7 * 66");
-			System.out.println("(2) 2 + 7 * (14 - 21) + 28 * 3 * 42 + 740 - (156 + 4 + 40) * 9");
-			System.out.print("Qual delas deseja resolver? Digite 1 ou 2: ");
+			logger.info("Dentre as expressões:");
+			logger.info("(1) 2 + 3 - 5 * 8 - 4 + 354 - 521 + 7 * 66");
+			logger.info("(2) 2 + 7 * (14 - 21) + 28 * 3 * 42 + 740 - (156 + 4 + 40) * 9");
+			logger.info("Qual delas deseja resolver? Digite 1 ou 2: ");
 			opcao = sc.next();
 
-			while(verifica == false) {
+			while(!verifica) {
 				if(opcao.equals("1")) {
 					a = 2 + 3 - 5 * 8 - 4 + 354 - 521 + 7 * 66;
-					System.out.print("O resultado da expressão é: " + a + ".");
+					String resultado1 = "O resultado da expressão é: " + a + ".";
+					logger.info(resultado1);
 					verifica = true;
 				} else if (opcao.equals("2")) {
 					b = 2 + 7 * (14 - 21) + 28 * 3 * 42 + 740 - (156 + 4 + 40) * 9;
-					System.out.print("O resultado da expressão é: " + b + ".");
+					String resultado2 ="O resultado da expressão é: " + b + "."; 
+					logger.info(resultado2);
 					verifica = true;
 				}else {
-					System.out.println("Entrada inválida!");
-					System.out.print("Qual expressão deseja resolver? ");	
+					logger.info("Entrada inválida!");
+					logger.info("Qual expressão deseja resolver? ");	
 					opcao = sc.next();
 				}
 			}

@@ -7,8 +7,13 @@ package br.com.lista.primeira_lista;
  */
 
 import java.util.Scanner;
+import java.util.logging.Logger;
+import br.com.lista.utils.Util;
 
 public class SegundoExercicioHera {
+	
+	//Instância do Logger
+	private static Logger logger = Util.setupLogger();
 
 	public static void main(String[] args) {
 		
@@ -21,11 +26,11 @@ public class SegundoExercicioHera {
 		
 		try (Scanner sc = new Scanner(System.in)) {
 			for (i = 0; i < 5; i++) { //Laço para capturar 5 idades de colegas
-				System.out.print("Digite a idade do colega " + (i + 1) + ": ");
+				logger.info("Digite a idade do colega " + (i + 1) + ": ");
 				idades[i] = sc.nextInt();
 			}
 			
-			System.out.print("Qual a sua idade? ");
+			logger.info("Qual a sua idade? ");
 			minhaIdade = sc.nextInt();
 		}
 		
@@ -35,7 +40,7 @@ public class SegundoExercicioHera {
 		
 		somaTotal = somaIdadesColegas + minhaIdade;
 		
-		System.out.println("O tempo de vida meu e dos meus colegas é " + somaTotal + ".");
+		logger.info("O tempo de vida meu e dos meus colegas é " + somaTotal + ".");
 	
 	}
 

@@ -1,6 +1,8 @@
 package br.com.lista.primeira_lista;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
+import br.com.lista.utils.Util;
 
 /*
  * Lista de Exercícios 1 - Exercício 4 - Atena
@@ -9,6 +11,9 @@ import java.util.Scanner;
  */
 
 public class QuartoExercicioAtena {
+	
+	//Instância do Logger
+	private static Logger logger = Util.setupLogger();
 
 	public static void main(String[] args) {
 
@@ -18,14 +23,15 @@ public class QuartoExercicioAtena {
 		//Instância Scanner
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("Digite a temperatura em ºC: ");
+		logger.info("Digite a temperatura em ºC: ");
 		celsius = sc.nextDouble();
 		
 		sc.close();
 		
 		farenheit = (celsius*1.8) + 32;
 		
-		System.out.print("A temperatura em ºF é: " + farenheit + ".");
+		String resultado = "A temperatura em ºF é: " + farenheit + ".";
+		logger.info(resultado);
 
 	}
 

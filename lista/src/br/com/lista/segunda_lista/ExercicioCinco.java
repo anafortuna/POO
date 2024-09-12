@@ -1,45 +1,65 @@
 package br.com.lista.segunda_lista;
 
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import br.com.lista.utils.Util;
 
 public class ExercicioCinco {
-	
+
+	// Método para aguardar
+	public void aguarde() {
+		try {
+			Thread.sleep(3000); // Pausa por 3000 milissegundos (2 segundos)
+		} catch (InterruptedException e) {
+			logger.log(Level.WARNING, "Interrupted!", e);
+			Thread.currentThread().interrupt();
+		}
+	}
+
+	// Instância do Logger
+	private static Logger logger = Util.setupLogger();
+
 	public static void main(String[] args) {
+
+		double horasQuebradas;
+		double minutos;
+		int horas;
+		int segundos;
+
+		Scanner sc = new Scanner(System.in);
+		ExercicioCinco aguardar = new ExercicioCinco();
 		
-		// Declaração de variáveis
-        double horasQuebradas, minutos;
-        int horas, segundos;
+		logger.info("Digite o número de horas a ser convertido em segundos: ");
+		horasQuebradas = sc.nextDouble();
 
-        // Criação do objeto Scanner para leitura de dados do usuário
-        Scanner sc = new Scanner(System.in);
+		logger.info("No valor informado, temos: ");
 
-        // Pede ao usuário que informe um número de horas
-        System.out.print("Digite o número de horas a ser convertido em segundos: ");
-        horasQuebradas = sc.nextDouble();
+		// Converte a parte inteira de horas
+		horas = (int) horasQuebradas;
 
-        System.out.println("No valor informado, temos: ");
+		// Calcula minutos
+		minutos = (horasQuebradas - horas) * 60;
+		minutos = Math.round(minutos); // Arredonda os minutos
 
-        // Converte a parte inteira de horas
-        horas = (int) horasQuebradas;
+		String horasMinutos = String.format("%d horas e %.0f minutos.", horas, minutos);
+		logger.info(horasMinutos);
+		aguardar.aguarde();
 
-        // Calcula minutos
-        minutos = (horasQuebradas - horas) * 60;
-        minutos = Math.round(minutos); // Arredonda os minutos
+		// Converte o número de horas informado em segundos
+		segundos = (int) (horasQuebradas * 3600);
 
-        System.out.printf("%d horas e %.0f minutos.%n", horas, minutos);
+		// Escreve na tela o passo a passo da conversão e o valor final
+		logger.info("Para calcular o valor em segundos, sabemos que:");
+		logger.info("1 hora = 3600 segundos");
+		aguardar.aguarde();
+		String resultado1 = String.format("Então, temos que %.2f horas equivalem a: ", horasQuebradas);
+		logger.info(resultado1);
+		String resultado2 = String.format("%.2f * 3600 = %d segundos.", horasQuebradas, segundos);
+		logger.info(resultado2);
 
-        // Converte o número de horas informado em segundos
-        segundos = (int) (horasQuebradas * 3600);
+		sc.close();
 
-        // Escreve na tela o passo a passo da conversão e o valor final
-        System.out.println("Para calcular o valor em segundos, sabemos que:");
-        System.out.println("1 hora = 3600 segundos");
-        System.out.printf("Então, temos que %.2f horas equivalem a:%n", horasQuebradas);
-        System.out.printf("%.2f * 3600 = %d segundos.%n", horasQuebradas, segundos);
-        
-        // Fecha o scanner
-        sc.close();
-		
 	}
 
 }
