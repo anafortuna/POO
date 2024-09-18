@@ -1,0 +1,9 @@
+Estudante;1;Ana Silva;123.456.789-00;ana.silva@email.com;1;3;3;anasilva;senha123;8;
+Estudante;2;Carlos Oliveira;234.567.890-11;carlos.oliveira@email.com;2;1;2;carlosoliveira;senha456;6;
+Estudante;3;Beatriz Santos;345.678.901-22;beatriz.santos@email.com;3;1;1;beatrizsantos;senha789;9;
+Professor;4;João Almeida;456.789.012-34;joao.almeida@email.com;1;1;Matemática;
+Professor;5;Maria Costa;567.890.123-45;maria.costa@email.com;2;1;Física;
+Professor;6;Pedro Santos;678.901.234-56;pedro.santos@email.com;3;3;Química;
+Faculdade;1;Universidade Central;12.345.678/0001-90;(11) 1234-5678;3;
+Faculdade;2;Instituto Superior;23.456.789/0001-01;(21) 2345-6789;5;
+Faculdade;3;Faculdade do Futuro;34.567.890/0001-12;(31) 3456-7890;4;

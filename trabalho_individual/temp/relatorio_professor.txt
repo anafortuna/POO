@@ -1,0 +1,14 @@
+17/09/2024 11:18:19
+############## INÍCIO ##############
+Professor: João Almeida
+Leciona a disciplina de: Matemática
+Na faculdade: Universidade Central
+
+Professor: Maria Costa
+Leciona a disciplina de: Física
+Na faculdade: Universidade Central
+
+Professor: Pedro Santos
+Leciona a disciplina de: Química
+Na faculdade: Faculdade do Futuro
+############### FIM ################

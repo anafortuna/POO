@@ -1,0 +1,23 @@
+17/09/2024 11:15:34
+############## INÍCIO ##############
+Nome do estudante: Ana Silva
+Email: ana.silva@email.com
+Faculdade: Faculdade do Futuro
+Nome do Professor: Pedro Santos
+Disciplina: Química
+Nota: 8.0
+
+Nome do estudante: Carlos Oliveira
+Email: carlos.oliveira@email.com
+Faculdade: Universidade Central
+Nome do Professor: Maria Costa
+Disciplina: Física
+Nota: 6.0
+
+Nome do estudante: Beatriz Santos
+Email: beatriz.santos@email.com
+Faculdade: Universidade Central
+Nome do Professor: João Almeida
+Disciplina: Matemática
+Nota: 9.0
+############### FIM ################
