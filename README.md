@@ -20,7 +20,7 @@
     
 ## 📁 Sobre o projeto
 
-O projeto tem como objetivo desenvolver um sistema para a geração de relatórios. Após fazer login na tela inicial, o usuário poderá escolher entre dois tipos de relatórios, com exibição no console ou exportação em arquivo TXT.
+O projeto tem como objetivo desenvolver um sistema para a geração de relatórios. Após fazer login na tela inicial, o usuário, que é um estudante, poderá escolher entre dois tipos de relatórios, com exibição no console ou exportação em arquivo TXT.
 
 O primeiro relatório reúne dados sobre as notas dos alunos, incluindo informações como nome do aluno, nome do professor, disciplina, faculdade e nota. Já o segundo relatório foca nos professores, apresentando detalhes como nome do professor, faculdade e disciplinas ministradas
 
