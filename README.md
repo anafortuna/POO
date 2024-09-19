@@ -1,9 +1,11 @@
 # Programação Orientada a Objetos
 
 📁 lista: Resolução das Listas de Exercícios
+
 **Descrição:** Resolução da Lista de Exercícios 1 e Lista de Exercícios 2 de Lógica de Programação, agora na linguagem Java.
 
 📁 aula_poo: Exercício Balanço 
+
 **Descrição:** Realizado para apresentação dos conceitos de Integer, Double e BigDecimal.
 
 📁 trabalho_individual: Trabalho realizado individualmente. Seguem detalhes abaixo:
